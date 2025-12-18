@@ -6,6 +6,7 @@ main {
   
   .content-section {
     width: 100%;
+    max-width: 1100px;
     margin: 0 auto;
   }
   
@@ -126,8 +127,6 @@ main {
     letter-spacing: 60px;
   }
   
-  /* Убирает ненужный отступ в конце слова, создаваемый свойством letter-spacing всего элемента */
-  
   .remove-spacing {
     letter-spacing: normal;
   }
@@ -187,10 +186,6 @@ main {
     list-style: none;
   }
   
-  .lost__card-list-item {
-    height: 100%;
-  }
-  
   .card-link {
     display: block;
     height: 100%;
@@ -203,7 +198,7 @@ main {
     justify-content: space-between;
     gap: 30px;
     width: auto;
-    height: 100%;
+    min-height: 450px;
     padding: 50px 40px;
   }
   
@@ -304,6 +299,7 @@ main {
   .footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 180px 50px 80px;
   }
   
@@ -331,4 +327,77 @@ main {
     display: flex;
     gap: 48px;
     list-style: none;
+  }
+  
+  @media (max-width: 1100px) {
+    .content-section {
+      max-width: 100%;
+      padding: 0 24px;
+    }
+    
+    .header {
+      padding: 60px 24px;
+      grid-template-columns: 1fr auto 1fr;
+    }
+    
+    .lots {
+      padding: 0 24px;
+    }
+    
+    .lots__card-list {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+    
+    .card {
+      min-height: 400px;
+    }
+    
+    .cover {
+      padding: 120px 24px 50px;
+    }
+    
+    .cover__title {
+      font-size: 80px;
+      letter-spacing: 25px;
+    }
+    
+    .letter-spacing-extended {
+      letter-spacing: 45px;
+    }
+    
+    .about {
+      padding: 0 24px;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    
+    .about__column_text {
+      grid-column: 1;
+    }
+    
+    .about__title {
+      padding: 40px 0;
+      text-align: center;
+    }
+    
+    .footer {
+      padding: 100px 24px 60px;
+      flex-direction: column;
+      gap: 50px;
+      align-items: center;
+    }
+    
+    .footer__address {
+      text-align: center;
+      order: 3;
+    }
+    
+    .footer__menu {
+      order: 1;
+    }
+    
+    .footer__social-list {
+      order: 2;
+    }
   }
