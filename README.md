@@ -1,1 +1,0 @@
-https://github.com/xers1k/ono-tebe-nado-ad.git
